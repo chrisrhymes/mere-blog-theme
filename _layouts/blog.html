@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+{{ content }}
+
+<div class="columns is-multiline">
+    <div class="column is-12">
+        {% include pagination.html %}
+    </div>
+    {% for post in paginator.posts %}
+    <div class="column is-12">
+        {% include post-item.html %}
+    </div>
+    {% endfor %}
+    <div class="column is-12">
+            {% include pagination.html %}
+    </div>
+</div>

@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Righteous&display=swap');
+$family-sans-serif: 'Open Sans', sans-serif;
+$family-serif: 'Righteous', cursive;
+$family-primary: $family-sans-serif;
+$family-secondary: $family-serif;
+$title-family: $family-secondary;
+h1, h2, h3, h4, h5, h6 {
+  font-family: $family-secondary;
+}
+
+// Colours
+$primary: #4fa6a3 !default;
+$dark: #363636;
+$light: #f6f6f6;
+$white: #ffffff;
+
+//Cards
+$card-shadow: none;
+$card-footer-border-top: none;
+$card-background-color: $light;
+
+// Pagination
+$pagination-focus-border-color: $dark;
+$pagination-current-color: $white;
+$pagination-current-background-color: $dark;
+$pagination-current-border-color: $dark;
+
+// Radius
+$radius: 0;
+$radius-large: 0;
+$radius-small: 0;
+
+@import "../node_modules/bulma/bulma.sass";
+@import "layout";
+@import "syntax";

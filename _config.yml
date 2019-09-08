@@ -1,0 +1,47 @@
+# Site Settings
+title: Mere Blog Theme
+tagline: Mere Blog Theme
+email: your-email@domain.com
+description: >
+  The demo site for Mere Blog Theme, made for Jekyll and GitHub pages websites
+baseurl: "/mere-blog-theme"
+url: "https://www.csrhymes.com"
+permalink: pretty
+
+paginate: 5
+paginate_path: "/blog/page:num"
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-seo-tag
+  - kramdown
+  - rouge
+
+exclude:
+  - Gemfile
+  - clean-theme.gemspec
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+livereload: true
+
+sass:
+  style: compressed
+  source_dir: _sass
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      author: "C.S. Rhymes"
+      layout: post
+      image: /img/home.jpg
+      show_sidebar: true

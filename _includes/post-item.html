@@ -1,0 +1,17 @@
+<div class="card">
+    <div class="card-image">
+        <img src="{{ post.image | prepend: site.baseurl }}" alt="{{ post.title }}" width="100%">
+    </div>
+    <div class="card-content">
+        <div class="content">
+            <a href="{{ site.baseurl }}{{ post.url }}">
+                <p class="title is-4">{{ post.title}}</p>
+            </a>
+            <p class="subtitle is-6">Published {{ post.date | date: "%b %-d, %Y" }} by {{ post.author }}</p>
+            <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 200 }}</p>
+        </div>
+        <div class="has-text-centered">
+            <a href="{{ site.baseurl }}{{ post.url }}" class="button is-dark is-fullwidth">Read more</a>
+        </div>
+    </div>
+</div>

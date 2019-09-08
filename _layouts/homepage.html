@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<div class="content">
+    {{ content }}
+</div>
+
+<div class="columns is-multiline">
+    {% assign post_width = "6|6|12|4|4|4" | split: "|" %}
+    {% for post in site.posts limit:6 %}
+    <div class="column is-{{ post_width[forloop.index0] }}">
+        {% include post-item.html %}
+    </div>
+    {% endfor %}
+
+    <div class="column is-12">
+        <div class="columns is-centered">
+            <div class="column is-3">
+                <a class="button is-dark is-fullwidth" href="{{ site.baseurl }}/blog/">More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,5 +1,8 @@
 # mere-blog-theme
 
+[![Gem Version](https://badge.fury.io/rb/mere-blog-theme.svg)](https://badge.fury.io/rb/mere-blog-theme) 
+![Gem](https://img.shields.io/gem/dt/mere-blog-theme)
+
 Mere is a minimal and simple blog theme, and nothing more, for use with Jekyll and GitHub Pages. It has been built with the Bulma frontend framework.
 
 It has a homepage which displays the latest 6 posts and a paginated blog page used to list out all blog posts. 

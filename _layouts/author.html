@@ -1,0 +1,43 @@
+---
+layout: default
+hide_hero: true
+---
+{% assign page.title = page.name %}
+
+<div class="columns is-multiline">
+    <div class="column is-3">
+        <p class="image is-square">
+            <img src="{{ page.avatar | prepend: site.baseurl }}" alt="{{ page.name }}" />
+        </p>
+    </div>
+    <div class="column">
+        <p class="title is-4">{{ page.name }}</p>
+        <p class="subtitle is-4">{{ page.position }}</p>
+
+        <div class="content">
+            {{ content }}
+        </div>
+
+        <p class="title is-5">Posts</p>
+        <div class="columns is-multiline">
+            {% assign filtered_posts = site.posts | where: 'author', page.short_name %}
+            {% for post in filtered_posts %}
+                <div class="column is-12">
+                    <div class="card">
+                        <div class="card-content">
+                            <p class="title is-5">{{ post.title }}</p>
+
+                            <div class="content">
+                                {{ post.excerpt | strip_html | strip_newlines | truncate: 100 }}
+                            </div>
+                            <a href="{{ post.url | prepend: site.baseurl }}" class="button is-dark is-fullwidth">Read more</a>
+                        </div>
+                    </div>
+                    <p class="title"></p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+

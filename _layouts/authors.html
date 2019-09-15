@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<div class="content">
+    {{ content }}
+</div>
+
+<div class="columns is-multiline">
+    {% for author in site.authors %}
+        <div class="column is-12">
+            {% include author-media.html %}
+        </div>
+    {% endfor %}
+</div>

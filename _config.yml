@@ -45,3 +45,13 @@ defaults:
       layout: post
       image: /img/home.jpg
       show_sidebar: true
+  -
+    scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+
+collections:
+  authors:
+    output: true

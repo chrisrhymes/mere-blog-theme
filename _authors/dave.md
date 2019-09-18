@@ -1,10 +1,8 @@
 ---
-short_name: Dave
 title: Dave - web dev
-name: Dave
+name: Dave Mc Dave
 position: Web Developer
 description: Dave is a web developer
 avatar: /img/dave.png
-website: https://www.csrhymes.com
 ---
-Dave is a web developer.
+Dave is a web developer. This is a page all about Dave.

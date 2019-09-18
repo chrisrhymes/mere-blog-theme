@@ -6,26 +6,36 @@ hide_hero: true
 
 <div class="columns is-multiline">
     <div class="column is-3">
+        {% if page.avatar %}
         <p class="image is-square">
             <img src="{{ page.avatar | prepend: site.baseurl }}" alt="{{ page.name }}" />
         </p>
+        {% else %}
+        <div class="has-text-centered">
+            <i class="fas fa-user fa-4x"></i>
+        </div>
+        {% endif %}
     </div>
     <div class="column">
         <p class="title is-4">{{ page.name }}</p>
-        <p class="subtitle is-4">{{ page.position }}</p>
+        <p class="subtitle is-4 is-gapless">{{ page.position }}</p>
 
+        {% if page.website %}
+        <p class="subtitle is-6"><a href="{{ page.website }}" title="Author Website">{{ page.website }}</a></p>
+        {% endif %}
         <div class="content">
             {{ content }}
         </div>
 
-        <p class="title is-5">Posts</p>
+        <p class="title is-5">Latest Posts</p>
         <div class="columns is-multiline">
-            {% assign filtered_posts = site.posts | where: 'author', page.short_name %}
-            {% for post in filtered_posts %}
+            {% assign filtered_posts = site.posts | where: 'author', page.name %}
+            {% for post in filtered_posts limit: 4 %}
                 <div class="column is-12">
                     <div class="card">
                         <div class="card-content">
                             <p class="title is-5">{{ post.title }}</p>
+                            <p class="subtitle is-6">Published {{ post.date | date: "%b %-d, %Y" }} by {{ post.author }}</p>
 
                             <div class="content">
                                 {{ post.excerpt | strip_html | strip_newlines | truncate: 100 }}

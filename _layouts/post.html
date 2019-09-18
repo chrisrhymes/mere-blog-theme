@@ -13,7 +13,7 @@ layout: default
     {% endfor %}
 </div>
 
-{% assign author = site.authors | where: 'short_name', page.author | first %}
+{% assign author = site.authors | where: 'name', page.author | first %}
 {% if author %}
 {% include author-media.html %}
 {% endif %}

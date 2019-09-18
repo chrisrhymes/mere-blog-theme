@@ -35,6 +35,7 @@ Or install it yourself as:
 * [Blog Setup](#blog-setup)
 * [Posts](#posts)
 * [Homepage](#homepage)
+* [Authors](#authors)
 * [Google Analytics](#google-analytics)
 
 ### Blog Setup
@@ -77,6 +78,43 @@ subtitle: This is the demo site for the Mere Blog Theme
 image: /img/home.jpg
 hero_height: is-large
 ```
+
+### Authors
+
+To enable the authors section, create a directory named `_authors` and create a page for each author within it. The author pages should have front matter in the following format. 
+
+**NOTE** The author name should match the author name in their posts exactly. 
+
+```yaml
+title: The authors page title
+name: Author Name
+position: Web Designer
+description: The short description of the author
+avatar: /img/avatar.png
+website: https://www.csrhymes.com
+```
+
+The website and avatar are optional, but if you are stuck for author images, why not try [https://getavataaars.com](https://getavataaars.com). Square images work best. You can then write about the author in the page content. 
+ 
+Next, create an `authors.md` page in the root of your site and set the layout to authors.
+
+```yaml
+layout: authors
+title: Authors
+description: The authors page
+```
+
+Add authors as a collection in your _config.yml file with output set to true so the pages are generated. 
+
+```yaml
+collections:
+  authors:
+    output: true
+```
+
+When you build your site, the authors link will appear in the navbar. The authors page will display the authors you have added. You can then click on their name or image to view the author page, along with a list of their 4 latest posts. 
+
+There will also be a link back to the authors page at the bottom of the post. 
 
 ### Google Analytics
 

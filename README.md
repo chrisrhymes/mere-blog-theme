@@ -86,6 +86,7 @@ To enable the authors section, create a directory named `_authors` and create a 
 **NOTE** The author name should match the author name in their posts exactly. 
 
 ```yaml
+layout: author
 title: The authors page title
 name: Author Name
 position: Web Designer

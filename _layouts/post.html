@@ -12,3 +12,8 @@ layout: default
     <span class="tag is-primary">{{ tag }}</span>
     {% endfor %}
 </div>
+
+{% assign author = site.authors | where: 'name', page.author | first %}
+{% if author %}
+{% include author-media.html %}
+{% endif %}

@@ -1,0 +1,24 @@
+<div class="author-media">
+    <div class="media">
+        <figure class="media-left">
+            <a href="{{ author.url | prepend: site.baseurl }}">
+                <p class="image is-64x64">
+                    {% if author.avatar %}
+                    <img src="{{ author.avatar | prepend: site.baseurl }}" alt="{{ author.name }}" />
+                    {% else %}
+                    <i class="fas fa-user fa-4x"></i>
+                    {% endif %}
+                </p>
+            </a>
+        </figure>
+        <div class="media-content">
+            <a href="{{ author.url | prepend: site.baseurl }}">
+                <p class="title is-5">{{ author.name }}</p>
+            </a>
+            <p class="subtitle is-5">{{ author.position }}</p>
+            <div class="content">
+                <p>{{ author.description }}</p>
+            </div>
+        </div>
+    </div>
+</div>

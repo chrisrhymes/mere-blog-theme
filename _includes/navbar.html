@@ -13,6 +13,9 @@
         <div class="navbar-menu" id="navMenu">
             <div class="navbar-end">
                 <a class="navbar-item" href="{{ site.baseurl }}/blog/">Blog</a>
+                {% if site.authors %}
+                <a class="navbar-item" href="{{ site.baseurl }}/authors/">Authors</a>
+                {% endif %}
             </div>
         </div>
     </div>

@@ -3,7 +3,9 @@
 {% include head.html %}
 <body>
 {% include navbar.html %}
-{% include hero.html %}
+{% unless page.hide_hero %}
+    {% include hero.html %}
+{% endunless %}
 <section class="section">
     <div class="container">
         {{ content }}

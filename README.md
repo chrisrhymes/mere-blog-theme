@@ -117,6 +117,23 @@ When you build your site, the authors link will appear in the navbar. The author
 
 There will also be a link back to the authors page at the bottom of the post. 
 
+#### Author Social Profiles
+
+**New in 0.2.1 **
+
+You can add links to an author's social profile pages by adding the profile name and link to the front matter in the author's page (such as _authors/chris.md). The below social profiles are available.
+
+```yaml
+facebook: https://www.facebook.com/
+twitter: https://www.twitter.com/
+github: https://www.github.com/
+gitlab: https://www.gitlab.com
+instagram: https://www.instagram.com
+linkedin: https://www.linkedin.com/
+medium: https://www.medium.com/
+stack_overflow: https://stackoverflow.com/
+```
+
 ### Google Analytics
 
 To enable Google Analytics add `google_analytics: UA-xxxxxxxx` to your `_config.yml` replacing the UA-xxxxxxxx with your Google Analytics property.

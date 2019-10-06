@@ -22,6 +22,9 @@ layout: default
         {% if page.website %}
         <p class="subtitle is-6"><a href="{{ page.website }}" title="Author Website">{{ page.website }}</a></p>
         {% endif %}
+
+        {% include social-buttons.html %}
+
         <div class="content">
             {{ content }}
         </div>

@@ -2,18 +2,40 @@
 layout: default
 ---
 
-<div class="content">
-    <p>Published: {{ page.date | date: "%b %-d, %Y" }} by {{ page.author }}</p>
-    {{ content }}
+{% if page.intro %}
+<div class="intro">
+    <div class="columns is-centered">
+        {% if page.intro_image %}
+        <div class="column is-8-desktop is-6-tablet">
+            <figure class="image {% if page.intro_image_ratio %} {{ page.intro_image_ratio }} {% else %} is-16by9 {% endif %}">
+                <img src="{{ page.intro_image | prepend: site.baseurl }}" alt="{{ page.title }}" />
+            </figure>
+        </div>
+        {% endif %}
+        <div class="column is-4-desktop is-6-tablet">
+            <p class="title is-1">{{ page.intro }}</p>
+        </div>
+    </div>
 </div>
-
-<div class="tags">
-    {% for tag in page.tags %}
-    <span class="tag is-primary">{{ tag }}</span>
-    {% endfor %}
-</div>
-
-{% assign author = site.authors | where: 'name', page.author | first %}
-{% if author %}
-{% include author-media.html %}
 {% endif %}
+
+<div class="columns is-centered">
+    <div class="column is-8-desktop is-10-tablet">
+        <div class="content">
+            <p><strong>Published: {{ page.date | date: "%b %-d, %Y" }} by {{ page.author }}</strong></p>
+            {{ content }}
+        </div>
+
+        <div class="tags">
+            {% for tag in page.tags %}
+            <span class="tag is-primary">{{ tag }}</span>
+            {% endfor %}
+        </div>
+
+        {% assign author = site.authors | where: 'name', page.author | first %}
+        {% if author %}
+        {% include author-media.html %}
+        {% endif %}
+    </div>
+</div>
+

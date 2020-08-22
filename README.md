@@ -43,6 +43,8 @@ Or install it yourself as:
 
 As of 0.4, the blog posts will be displayed on the homepage including pagination, instead of in a separate blog page. 
 
+**The homepage page needs to be called index.html for the blog pagination**
+
 Set the paginator up in the `_config.yml` file with the posts per page and the path to the blog.
 
 ```yaml

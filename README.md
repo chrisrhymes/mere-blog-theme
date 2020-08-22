@@ -41,23 +41,18 @@ Or install it yourself as:
 
 ### Blog Setup
 
-Create a `blog` directory with an `index.html` file inside it. Set the front matter of the `blog/index.html` page with the layout of blog. 
-
-```yaml
-layout: blog
-title: Blog
-```
+As of 0.4, the blog posts will be displayed on the homepage including pagination, instead of in a separate blog page. 
 
 Set the paginator up in the `_config.yml` file with the posts per page and the path to the blog.
 
 ```yaml
-paginate: 5
-paginate_path: "/blog/page:num"
+paginate: 6
+paginate_path: "/page:num"
 ```
 
 ### Posts
 
-Posts should be created in the _posts directory as per standard Jekyll usage. The frontmatter should contain the layout of post, the image to use in the header and the homepage / blog page, the title of the post and the author of the post. You can also set a subtitle for the post if you want to.
+Posts should be created in the _posts directory as per standard Jekyll usage. The front matter should contain the layout of post, the image to use in the header and the homepage / blog page, the title of the post and the author of the post. You can also set a subtitle for the post if you want to.
 
 ```yaml
 layout: post

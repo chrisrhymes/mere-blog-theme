@@ -39,16 +39,23 @@
       {% if page.image %}
         <meta property="og:image" content="{{ site.baseurl }}{{page.image}}" />
         <meta name="twitter:image" content="{{ site.baseurl }}{{page.image}}" />
+        <meta name="twitter:card" content="summary_large_image" />
       {% elsif site.banner_image %}
         <meta property="og:image" content="{{ site.baseurl }}{{site.banner_image}}" />
         <meta name="twitter:image" content="{{ site.baseurl }}{{site.banner_image}}" />
-      {% endif %}
-
-
-      {% if page.intro_image %}
-        <meta name="twitter:card" content="{{ site.baseurl }}{{page.intro_image}}" />
-      {% elsif page.banner_image %}
-        <meta name="twitter:card" content="{{ site.baseurl }}{{page.banner_image}}" />
-      {% endif %}      
+        <meta name="twitter:card" content="summary_large_image" />
+      {% else %}
+        <meta name="twitter:card" content="summary" />
+      {% endif %}   
+    {% else %}
+      <meta property="og:type" content="website" />
+      <meta name="twitter:title" content="{{site.title}}" />
+      {% if site.banner_image %}
+        <meta property="og:image" content="{{ site.baseurl }}{{site.banner_image}}" />
+        <meta name="twitter:image" content="{{ site.baseurl }}{{site.banner_image}}" />
+        <meta name="twitter:card" content="summary_large_image" />
+      {% else %}
+        <meta name="twitter:card" content="summary" />
+      {% endif %}   
     {% endif %}
 </head>

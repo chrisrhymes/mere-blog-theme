@@ -21,7 +21,14 @@
     {% if site.twitter_username %}
       <meta name="twitter:site" content="@{{ site.twitter_username }}" />
     {% endif %}
-    <meta name="twitter:description" content="{% if page.intro %}{{ page.intro | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
+    {% if page.intro %}
+      <meta name="twitter:description" content="{{ page.intro | strip_html | strip_newlines | truncate: 160 }}" />
+    {% elsif page.description %}
+      <meta name="twitter:description" content="{{ page.description | strip_html | strip_newlines | truncate: 160 }}" />
+    {% else %}
+      <meta name="twitter:description" content="{{ site.description }}" />
+    {% endif %}
+    
     
     {% if page.layout == "post" %}
       <meta property="og:type" content="article" />

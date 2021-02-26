@@ -36,7 +36,11 @@
         <meta name="twitter:creator" content="@{{ site.twitter_username }}" />
       {% endif %}    
 
-      {% if page.image %}
+      {% if page.banner_image %}
+        <meta property="og:image" content="{{ site.baseurl }}{{page.banner_image}}" />
+        <meta name="twitter:image" content="{{ site.baseurl }}{{page.banner_image}}" />
+        <meta name="twitter:card" content="summary_large_image" />
+      {% elsif page.image %}
         <meta property="og:image" content="{{ site.baseurl }}{{page.image}}" />
         <meta name="twitter:image" content="{{ site.baseurl }}{{page.image}}" />
         <meta name="twitter:card" content="summary_large_image" />

@@ -10,4 +10,45 @@
       {%- include google-analytics.html -%}
     {%- endif -%}
     {%- include head-scripts.html -%}
+    <!-- Metadata for Social Networks -->
+    <meta property="og:site_name" content="{{ site.title }}" />
+    {% if page.author %}
+      <meta name="author" content="{{ page.author }}" />
+    {% endif %}
+    <meta property="og:title" content="{% if page.title %}{{ page.title | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.title }}{% endif %}">
+    <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+    {% if site.twitter_username %}
+      <meta name="twitter:site" content="@{{ site.twitter_username }}" />
+    {% endif %}
+    <meta name="twitter:description" content="{% if page.intro %}{{ page.intro | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
+    
+    {% if page.layout == "post" %}
+      <meta property="og:type" content="article" />
+      <meta property="article:published_time" content="{{page.date}}" />
+      <meta property="article:author" content="{{ page.author }}" />
+      {% for tag in page.categories %}
+        <meta property="article:tag" content="{{tag}}" />
+      {% endfor %}
+      <!-- Twitter -->
+      <meta name="twitter:title" content="{{page.title}}" />
+      {% if site.twitter_username %}
+        <meta name="twitter:creator" content="@{{ site.twitter_username }}" />
+      {% endif %}    
+
+      {% if page.image %}
+        <meta property="og:image" content="{{ site.baseurl }}{{page.image}}" />
+        <meta name="twitter:image" content="{{ site.baseurl }}{{page.image}}" />
+      {% elsif site.banner_image %}
+        <meta property="og:image" content="{{ site.baseurl }}{{site.banner_image}}" />
+        <meta name="twitter:image" content="{{ site.baseurl }}{{site.banner_image}}" />
+      {% endif %}
+
+
+      {% if page.intro_image %}
+        <meta name="twitter:card" content="{{ site.baseurl }}{{page.intro_image}}" />
+      {% elsif page.banner_image %}
+        <meta name="twitter:card" content="{{ site.baseurl }}{{page.banner_image}}" />
+      {% endif %}      
+    {% endif %}
 </head>

@@ -7,6 +7,8 @@ Mere is a minimal and simple blog theme, and nothing more, for use with Jekyll a
 
 It has a homepage which displays the latest 6 posts and a paginated blog page used to list out all blog posts. 
 
+**Mere Blog Theme uses Jekyll 3.9 for compatibility with GitHub Pages**
+
 
 ## Installation
 

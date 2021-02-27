@@ -2,6 +2,7 @@
 
 Bulma is a **modern CSS framework** based on [Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes).
 
+![Github](https://img.shields.io/github/v/release/jgthms/bulma?logo=Bulma)
 [![npm](https://img.shields.io/npm/v/bulma.svg)][npm-link]
 [![npm](https://img.shields.io/npm/dm/bulma.svg)][npm-link]
 [![](https://data.jsdelivr.com/v1/package/npm/bulma/badge)](https://www.jsdelivr.com/package/npm/bulma)
@@ -39,7 +40,7 @@ bower install bulma
 After installation, you can import the CSS file into your project using this snippet:
 
 ```sh
-import 'bulma/css/bulma.css'
+@import 'bulma/css/bulma.css'
 ```
 
 ### CDN
@@ -120,10 +121,12 @@ Browse the [online documentation here.](https://bulma.io/documentation/overview/
 | [Bulmil](https://github.com/gomah/bulmil)                                       | An agnostic UI components library based on Web Components, made with Bulma & Stencil.                                                |
 | [Svelte Bulma Components](https://github.com/elcobvg/svelte-bulma-components)                                       | Library of UI components to be used in [Svelte.js](https://svelte.technology/) or standalone.                                                |
 | [Bulma Nunjucks Starterkit](https://github.com/benninkcorien/nunjucks-starter-kit)                                       | Starterkit for Nunjucks with Bulma.                                                |
+| [Bulma-Social](https://github.com/aldi/bulma-social)                                 | Social Buttons and Colors for Bulma                                                    |
+| [Divjoy](https://divjoy.com/?kit=bulma)                                 | React codebase generator with Bulma templates                                                    |
 
-## Copyright and license
+## Copyright and license ![Github](https://img.shields.io/github/license/jgthms/bulma?logo=Github)
 
-Code copyright 2020 Jeremy Thomas. Code released under [the MIT license](https://github.com/jgthms/bulma/blob/master/LICENSE).
+Code copyright 2021 Jeremy Thomas. Code released under [the MIT license](https://github.com/jgthms/bulma/blob/master/LICENSE).
 
 [npm-link]: https://www.npmjs.com/package/bulma
 [awesome-link]:  https://github.com/awesome-css-group/awesome-css

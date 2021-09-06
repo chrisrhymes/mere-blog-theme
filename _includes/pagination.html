@@ -1,11 +1,11 @@
 <nav class="pagination is-centered">
     {% if paginator.previous_page %}
-    <a href="{{ site.baseurl }}{{ paginator.previous_page_path }}" class="pagination-previous is-info"><i class="fas fa-chevron-left"></i></a>
+    <a href="{{ site.baseurl }}{{ paginator.previous_page_path }}/index.html" class="pagination-previous is-info"><i class="fas fa-chevron-left"></i></a>
     {% else %}
     <p class="pagination-previous" disabled><i class="fas fa-chevron-left"></i></p>
     {% endif %}
     {% if paginator.next_page %}
-    <a href="{{ site.baseurl }}{{ paginator.next_page_path }}" class="pagination-next is-info"><i class="fas fa-chevron-right"></i></a>
+    <a href="{{ site.baseurl }}{{ paginator.next_page_path }}/index.html" class="pagination-next is-info"><i class="fas fa-chevron-right"></i></a>
     {% else %}
     <p class="pagination-next" disabled ><i class="fas fa-chevron-right"></i></p>
     {% endif %}
@@ -14,9 +14,9 @@
         {% if page == paginator.page %}
         <li><a class="pagination-link is-current">{{ page }}</a></li>
         {% elsif page == 1 %}
-        <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pagination-link">{{ page }}</a></li>
+        <li><a href="{{ site.baseurl }}/index.html" class="pagination-link">{{ page }}</a></li>
         {% else %}
-        <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="pagination-link">{{ page }}</a></li>
+        <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}/index.html" class="pagination-link">{{ page }}</a></li>
         {% endif %}
         {% endfor %}
     </ul>

@@ -7,7 +7,7 @@ layout: default
       {% if page.intro_image %}
         <div class="column is-8-desktop is-6-tablet">
           <figure class="image {% if page.intro_image_ratio %} {{ page.intro_image_ratio }} {% else %} is-16by9 {% endif %}">
-            <img src="{{ page.intro_image | prepend: site.baseurl }}" alt="{{ page.title }}">
+            <img src="{{ page.intro_image | relative_url }}" alt="{{ page.title }}">
           </figure>
         </div>
       {% endif %}

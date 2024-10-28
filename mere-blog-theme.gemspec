@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "mere-blog-theme"
-  spec.version       = "1.0"
+  spec.version       = "1.0.1"
   spec.authors       = ["chrisrhymes"]
   spec.email         = ["csrhymes@gmail.com"]
 

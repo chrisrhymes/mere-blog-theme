@@ -1,4 +1,4 @@
---- 
+---
 layout: post
 title: First Post
 image: /img/home.jpg

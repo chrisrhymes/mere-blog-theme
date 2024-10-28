@@ -1,22 +1,19 @@
 ---
 layout: default
 ---
-
-<div class="content">
-    {{ content }}
+<div class="content mb-4">
+  {{ content }}
 </div>
 
 <div class="columns is-multiline">
-    {% assign post_width = "6|6|12|4|4|4" | split: "|" %}
-    {% for post in paginator.posts limit:6 %}
+  {% assign post_width = '6|6|12|4|4|4' | split: '|' %}
+  {% for post in paginator.posts limit: 6 %}
     <div class="column is-{{ post_width[forloop.index0] }}">
-        {% include post-item.html %}
+      {% include post-item.html %}
     </div>
-    {% endfor %}
+  {% endfor %}
 
-    <div class="column is-12">
-        {% include pagination.html %}
-    </div>
+  <div class="column is-12">
+    {% include pagination.html %}
+  </div>
 </div>
-
-

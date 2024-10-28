@@ -15,6 +15,7 @@ linkedin: https://www.linkedin.com/in/chris-rhymes-a6a85971
 medium: https://www.medium.com/@chrisrhymes
 stack_overflow: https://stackoverflow.com/
 ---
+
 C.S. Rhymes is a web developer and a part time author, specialising in Laravel, Vue.js and developing Jekyll themes.
 
-This theme was built by C.S. Rhymes as well as the [Bulma Clean Theme](https://www.csrhymes.com/bulma-clean-theme). 
+This theme was built by C.S. Rhymes as well as the [Bulma Clean Theme](https://www.csrhymes.com/bulma-clean-theme).

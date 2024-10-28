@@ -1,5 +1,7 @@
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+
 .intro {
-    padding: $gap;
-    background: $light;
-    margin-bottom: 3rem;
+  padding: $gap;
+
+  margin-bottom: 3rem;
 }

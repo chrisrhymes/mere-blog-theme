@@ -4,52 +4,65 @@ layout: default
 {% assign page.title = page.name %}
 
 <div class="columns is-multiline">
-    <div class="column is-3">
-        {% if page.avatar %}
-        <p class="image is-square">
-            <img src="{{ page.avatar | prepend: site.baseurl }}" alt="{{ page.name }}" />
-        </p>
-        {% else %}
-        <div class="has-text-centered">
-            <i class="fas fa-user fa-4x"></i>
-        </div>
-        {% endif %}
-    </div>
-    <div class="column">
+  <div class="column is-3">
+    {% if page.avatar %}
+      <p class="image is-square">
+        <img src="{{ page.avatar | prepend: site.baseurl }}" alt="{{ page.name }}">
+      </p>
+    {% else %}
+      <div class="has-text-centered">
+        <i class="fas fa-user fa-4x"></i>
+      </div>
+    {% endif %}
+  </div>
+  <div class="column">
+    <div class="columns is-multiline">
+      <div class="column is-full">
         <p class="title is-4">{{ page.name }}</p>
         <p class="subtitle is-4 is-gapless">{{ page.position }}</p>
+      </div>
 
-        {% if page.website %}
-        <p class="subtitle is-6"><a href="{{ page.website }}" title="Author Website">{{ page.website }}</a></p>
-        {% endif %}
-
+      {% if page.website %}
+        <div class="column is-full">
+          <p class="subtitle is-6">
+            <a href="{{ page.website }}" title="Author Website">{{ page.website }}</a>
+          </p>
+        </div>
+      {% endif %}
+      <div class="column is-full">
         {% include social-buttons.html %}
-
+      </div>
+      <div class="column is-full">
         <div class="content">
-            {{ content }}
+          {{ content }}
         </div>
-
+      </div>
+      <div class="column is-full">
         <p class="title is-5">Latest Posts</p>
-        <div class="columns is-multiline">
-            {% assign filtered_posts = site.posts | where: 'author', page.name %}
-            {% for post in filtered_posts limit: 4 %}
-                <div class="column is-12">
-                    <div class="card">
-                        <div class="card-content">
-                            <p class="title is-5">{{ post.title }}</p>
-                            <p class="subtitle is-6">Published {{ post.date | date: "%b %-d, %Y" }} by {{ post.author }}</p>
+      </div>
 
-                            <div class="content">
-                                {{ post.excerpt | strip_html | strip_newlines | truncate: 100 }}
-                            </div>
-                            <a href="{{ post.url | prepend: site.baseurl }}" class="button is-dark is-fullwidth">Read more</a>
-                        </div>
-                    </div>
-                    <p class="title"></p>
-                </div>
-            {% endfor %}
+      {% assign filtered_posts = site.posts | where: 'author', page.name %}
+      {% for post in filtered_posts limit: 4 %}
+        <div class="column is-12">
+          <div class="card">
+            <div class="card-content">
+              <a href="{{ post.url | prepend: site.baseurl }}" class="is-block">
+                <p class="title is-5">{{ post.title }}</p>
+              </a>
+
+              <div class="content">
+                <p class="">Published {{ post.date | date: '%b %-d, %Y' }} by {{ post.author }}</p>
+                <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 100 }}</p>
+              </div>
+            </div>
+            {% comment %}
+              <div class="card-footer">
+                <a href="{{ post.url | prepend: site.baseurl }}" class="button is-dark card-footer-item">Read more</a>
+              </div>
+            {% endcomment %}
+          </div>
         </div>
+      {% endfor %}
     </div>
+  </div>
 </div>
-
-

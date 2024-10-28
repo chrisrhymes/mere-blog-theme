@@ -1,30 +1,41 @@
 .content {
-    ul.pagination-list {
-        list-style: none;
-        margin-left: 0;
-        margin-top: 0;
+  ul.pagination-list {
+    list-style: none;
+    margin-left: 0;
+    margin-top: 0;
 
-        li+li {
-            margin-top: 0;
-        }
+    li + li {
+      margin-top: 0;
     }
+  }
 }
 
 div.highlight {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 @include desktop {
-    .navbar-item {
-        &.is-hoverable:hover {
-            .navbar-dropdown {
-                display: block;
-            }
-        }
+  .navbar-item {
+    &.is-hoverable:hover {
+      .navbar-dropdown {
+        display: block;
+      }
     }
+  }
 }
 
-.author-media {
-    padding: 1.5rem;
-    background: $light;
+a {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration-style: dotted;
+  }
+}
+
+.avatar-link {
+  display: inline-block;
+  &:hover,
+  &:focus {
+    outline: 1px solid $link;
+  }
 }

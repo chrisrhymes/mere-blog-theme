@@ -12,6 +12,6 @@
   "author": "chrisrhymes",
   "license": "MIT",
   "dependencies": {
-    "bulma": "^0.9"
+    "bulma": "^1.0"
   }
 }

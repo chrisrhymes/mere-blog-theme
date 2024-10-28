@@ -24,7 +24,7 @@ div.highlight {
   }
 }
 
-a {
+a:not(.button) {
   text-decoration: underline;
 
   &:hover {

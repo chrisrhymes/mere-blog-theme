@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Second Post
+image: https://picsum.photos/id/57/1200/800
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elit eros, porta eget dapibus vitae, tempus et mi. Maecenas sollicitudin ligula vel metus condimentum, ac commodo sem vestibulum. Morbi tempus dui sapien, vel mattis orci faucibus id. Nulla congue elit vel accumsan mattis. Ut vel dolor porttitor, laoreet risus in, tempus velit. Praesent eu nisi enim. Integer sed venenatis risus, eget semper sapien. Nulla at lacinia lectus. Sed rutrum lectus at vestibulum tristique. Cras ex sem, consequat at dapibus scelerisque, iaculis sit amet tellus. Fusce eu orci ut ex consequat semper. Mauris pharetra dictum dui, vestibulum egestas erat.

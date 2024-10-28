@@ -2,10 +2,10 @@
   <div class="card-content">
     <div class="media">
       <figure class="media-left">
-        <a href="{{ author.url | prepend: site.baseurl }}" class="avatar-link">
+        <a href="{{ author.url | relative_url }}" class="avatar-link">
           <p class="image is-64x64">
             {% if author.avatar %}
-              <img src="{{ author.avatar | prepend: site.baseurl }}" alt="{{ author.name }}">
+              <img src="{{ author.avatar | relative_url }}" alt="{{ author.name }}">
             {% else %}
               <i class="fas fa-user fa-4x"></i>
             {% endif %}
@@ -13,7 +13,7 @@
         </a>
       </figure>
       <div class="media-content">
-        <a href="{{ author.url | prepend: site.baseurl }}" class="is-block">
+        <a href="{{ author.url | relative_url }}" class="is-block">
           <p class="title is-5">{{ author.name }}</p>
         </a>
 

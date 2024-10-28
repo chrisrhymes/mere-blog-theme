@@ -43,7 +43,7 @@ defaults:
     values:
       author: "C.S. Rhymes"
       layout: post
-      image: https://picsum.photos/id/16/1200/800
+      image: /img/home.jpg
       show_sidebar: true
   - scope:
       path: ""
